@@ -1,0 +1,122 @@
+{
+  "misiones": [
+    {
+      "id": "seguridad-cuentas",
+      "titulo": "Protección de cuentas",
+      "descripcion": "Aprende a proteger tus cuentas digitales con buenas prácticas.",
+      "preguntas": [
+        {
+          "pregunta": "¿Cuál es una buena práctica para contraseñas seguras?",
+          "opciones": ["Usar tu nombre", "123456", "Frases largas y únicas", "Fecha de cumpleaños"],
+          "respuestaCorrecta": 2
+        },
+        {
+          "pregunta": "¿Qué herramienta se recomienda para guardar contraseñas?",
+          "opciones": [
+            "Notas en el celular",
+            "Un gestor de contraseñas",
+            "Correo electrónico",
+            "Papel en la billetera"
+          ],
+          "respuestaCorrecta": 1
+        }
+      ],
+      "jefe": {
+        "pregunta": "¿Qué hacer si sospechas que tu cuenta fue comprometida?",
+        "opciones": [
+          "Ignorar",
+          "Cambiar la contraseña",
+          "Publicarlo en redes",
+          "Desactivar el antivirus"
+        ],
+        "respuestaCorrecta": 1
+      },
+      "recompensa": {
+        "nombre": "La capucha del anonimato",
+        "descripcion": "Otorgada por dominar la protección de cuentas."
+      }
+    },
+    {
+      "id": "oficina-segura",
+      "titulo": "Oficina segura",
+      "descripcion": "Aprende a mantener tu espacio físico de trabajo protegido.",
+      "preguntas": [
+        {
+          "pregunta": "¿Qué se recomienda hacer con documentos sensibles al final del día?",
+          "opciones": [
+            "Dejarlos sobre el escritorio",
+            "Guardarlos en un cajón con llave",
+            "Llevarlos a casa",
+            "Dejarlos en la impresora"
+          ],
+          "respuestaCorrecta": 1
+        },
+        {
+          "pregunta": "¿Qué se debe revisar antes de dejar sola la oficina?",
+          "opciones": [
+            "El café",
+            "El correo electrónico",
+            "Cerraduras y ventanas",
+            "La temperatura"
+          ],
+          "respuestaCorrecta": 2
+        }
+      ],
+      "jefe": {
+        "pregunta": "¿Cuál es una buena práctica contra intrusos físicos?",
+        "opciones": [
+          "Dejar la puerta abierta",
+          "Instalar cámaras falsas",
+          "Control de acceso físico",
+          "No usar credenciales"
+        ],
+        "respuestaCorrecta": 2
+      },
+      "recompensa": {
+        "nombre": "Shuriken de oficina segura",
+        "descripcion": "Te hace invisible a los curiosos en tu espacio de trabajo."
+      }
+    },
+    {
+      "id": "comunicaciones-seguras",
+      "titulo": "Comunicaciones seguras",
+      "descripcion": "Protege tus conversaciones digitales con prácticas seguras.",
+      "preguntas": [
+        {
+          "pregunta": "¿Qué app es recomendada para chats cifrados de extremo a extremo?",
+          "opciones": [
+            "Facebook Messenger",
+            "Telegram sin chat secreto",
+            "Signal",
+            "Correo sin cifrar"
+          ],
+          "respuestaCorrecta": 2
+        },
+        {
+          "pregunta": "¿Cuál es una buena práctica al compartir información sensible?",
+          "opciones": [
+            "Usar redes sociales",
+            "Compartir sin verificar identidad",
+            "Usar canales cifrados y verificar identidad",
+            "Enviar por SMS"
+          ],
+          "respuestaCorrecta": 2
+        }
+      ],
+      "jefe": {
+        "pregunta": "¿Qué hacer si necesitas comunicar algo muy sensible?",
+        "opciones": [
+          "Mandarlo por WhatsApp",
+          "Decirlo en voz alta en la calle",
+          "Evitar medios digitales si es posible",
+          "Publicarlo en un blog"
+        ],
+        "respuestaCorrecta": 2
+      },
+      "recompensa": {
+        "nombre": "Guantes del sigilo comunicativo",
+        "descripcion": "Te ayudan a comunicarte sin dejar rastro."
+      }
+    }
+  ]
+}
