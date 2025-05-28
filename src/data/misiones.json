@@ -8,7 +8,9 @@
         {
           "pregunta": "¿Cuál es una buena práctica para contraseñas seguras?",
           "opciones": ["Usar tu nombre", "123456", "Frases largas y únicas", "Fecha de cumpleaños"],
-          "respuestaCorrecta": 2
+          "respuestaCorrecta": 2,
+          "explicacionIncorrecta": "E...",
+          "explicacionCorrecta": "Las frases largas y únicas son más difíciles de adivinar o crackear."
         },
         {
           "pregunta": "¿Qué herramienta se recomienda para guardar contraseñas?",
@@ -18,7 +20,9 @@
             "Correo electrónico",
             "Papel en la billetera"
           ],
-          "respuestaCorrecta": 1
+          "respuestaCorrecta": 1,
+          "explicacionIncorrecta": "E...",
+          "explicacionCorrecta": "Una herramienta segura es mucho mejor por ...."
         }
       ],
       "jefe": {
@@ -29,7 +33,9 @@
           "Publicarlo en redes",
           "Desactivar el antivirus"
         ],
-        "respuestaCorrecta": 1
+        "respuestaCorrecta": 1,
+        "explicacionIncorrecta": "E...",
+        "explicacionCorrecta": "Medidas oporunas y bla bla"
       },
       "recompensa": {
         "nombre": "La capucha del anonimato",
@@ -49,7 +55,9 @@
             "Llevarlos a casa",
             "Dejarlos en la impresora"
           ],
-          "respuestaCorrecta": 1
+          "respuestaCorrecta": 1,
+          "explicacionIncorrecta": "E...",
+          "explicacionCorrecta": "Observa tu entorno y bla bla"
         },
         {
           "pregunta": "¿Qué se debe revisar antes de dejar sola la oficina?",
@@ -59,7 +67,9 @@
             "Cerraduras y ventanas",
             "La temperatura"
           ],
-          "respuestaCorrecta": 2
+          "respuestaCorrecta": 2,
+          "explicacionIncorrecta": "E...",
+          "explicacionCorrecta": "que medidas y bla bla"
         }
       ],
       "jefe": {
@@ -70,7 +80,9 @@
           "Control de acceso físico",
           "No usar credenciales"
         ],
-        "respuestaCorrecta": 2
+        "respuestaCorrecta": 2,
+        "explicacionIncorrecta": "E...",
+        "explicacionCorrecta": "Boton de panicoy bla bla"
       },
       "recompensa": {
         "nombre": "Shuriken de oficina segura",
@@ -90,7 +102,9 @@
             "Signal",
             "Correo sin cifrar"
           ],
-          "respuestaCorrecta": 2
+          "respuestaCorrecta": 2,
+          "explicacionIncorrecta": "E...",
+          "explicacionCorrecta": "Piensa en y bla bla"
         },
         {
           "pregunta": "¿Cuál es una buena práctica al compartir información sensible?",
@@ -100,7 +114,9 @@
             "Usar canales cifrados y verificar identidad",
             "Enviar por SMS"
           ],
-          "respuestaCorrecta": 2
+          "respuestaCorrecta": 2,
+          "explicacionIncorrecta": "E...",
+          "explicacionCorrecta": "Consideray bla bla"
         }
       ],
       "jefe": {
@@ -111,7 +127,9 @@
           "Evitar medios digitales si es posible",
           "Publicarlo en un blog"
         ],
-        "respuestaCorrecta": 2
+        "respuestaCorrecta": 2,
+        "explicacionIncorrecta": "E...",
+        "explicacionCorrecta": "acuerdos bla y bla bla"
       },
       "recompensa": {
         "nombre": "Guantes del sigilo comunicativo",
