@@ -27,6 +27,7 @@
       ],
       "jefe": {
         "nombre": "Yōkai Hacker",
+        "imagen": "yokai-hacker.png",
         "mensajeIntro": "¡Ja! ¿Crees que puedes proteger tus cuentas contra mí?",
         "mensajeCorrecto": "¡No puede ser! Tu conocimiento me ha herido.",
         "mensajeIncorrecto": "¡Tu error me da poder!",
@@ -78,6 +79,7 @@
       ],
       "jefe": {
         "nombre": "Espiritu Infiltrado",
+        "imagen": "yokai-hacker.png",
         "mensajeIntro": "¡Ja! ¿Crees que puedes proteger tus oficinas?",
         "mensajeCorrecto": "¡No puede ser! Tu conocimiento me ha herido.",
         "mensajeIncorrecto": "¡Tu error me da poder!",
@@ -129,6 +131,7 @@
       ],
       "jefe": {
         "nombre": "Yōkai Hacker",
+        "imagen": "yokai-hacker.png",
         "mensajeIntro": "¡Ja! ¿Crees que puedes proteger informacion sensible?",
         "mensajeCorrecto": "¡No puede ser! Tu conocimiento me ha herido.",
         "mensajeIncorrecto": "¡Tu error me da poder!",
