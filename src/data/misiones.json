@@ -44,7 +44,8 @@
       },
       "recompensa": {
         "nombre": "La capucha del anonimato",
-        "descripcion": "Otorgada por dominar la protección de cuentas."
+        "descripcion": "Otorgada por dominar la protección de cuentas.",
+        "icono": "bi bi-eye-slash-fill"
       }
     },
     {
@@ -96,7 +97,8 @@
       },
       "recompensa": {
         "nombre": "Shuriken de oficina segura",
-        "descripcion": "Te hace invisible a los curiosos en tu espacio de trabajo."
+        "descripcion": "Te hace invisible a los curiosos en tu espacio de trabajo.",
+        "icono": "bi bi-eye-slash-fill"
       }
     },
     {
@@ -148,7 +150,8 @@
       },
       "recompensa": {
         "nombre": "Guantes del sigilo comunicativo",
-        "descripcion": "Te ayudan a comunicarte sin dejar rastro."
+        "descripcion": "Te ayudan a comunicarte sin dejar rastro.",
+        "icono": "bi bi-eye-slash-fill"
       }
     }
   ]
