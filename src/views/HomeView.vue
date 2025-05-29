@@ -8,26 +8,14 @@
     <!-- Contenido principal -->
     <main class="d-flex flex-column align-items-center">
       <img src="../assets/ninja.png" alt="Ninja" class="ninja-image" />
-
-      <button @click="startMission" class="btn btn-lg start-mission-button mt-4">
-        INICIAR MISIÓN
-      </button>
       <router-link to="/misiones" class="btn btn-success btn-lg mt-4">
-        INICIAR MISIÓNes
+        INICIAR MISIONES
       </router-link>
     </main>
   </section>
 </template>
 
-<script>
-export default {
-  methods: {
-    startMission() {
-      this.$router.push('/mision')
-    },
-  },
-}
-</script>
+<script setup></script>
 
 <style scoped>
 .logo-image {

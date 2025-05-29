@@ -21,7 +21,7 @@
 
     <!-- Jefe final -->
     <div v-else-if="!jefeDerrotado && currentQuestionIndex === totalPreguntas">
-      <h4>¡Jefe Final!</h4>
+      <h4>⚔️ {{ nombreJefe }}</h4>
       <QuizQuestion
         :pregunta="mision.jefe"
         @respuestaCorrecta="handleJefeFinalCorrecto(true)"
@@ -35,16 +35,29 @@
     </div>
 
     <!-- Pantalla de derrota -->
-    <div v-if="vidas <= 0" class="game-over text-center">
-      <h3>💀 ¡Te quedaste sin vidas!</h3>
-      <p>La misión ha fallado. Inténtalo otra vez.</p>
-      <button class="btn btn-danger" @click="resetJuego">Reintentar</button>
+    <div v-if="vidas <= 0" class="game-over-overlay">
+      <div class="game-over-content text-center">
+        <h2 v-if="derrotadoPorJefe">
+          ❌ El <strong>{{ nombreJefe }}</strong> te ha derrotado.
+        </h2>
+        <h2 v-else>💀 {{ ultimaPreguntaFallada ? 'Misión fallida' : 'Sin vidas' }}</h2>
+
+        <p class="mt-3">
+          {{
+            derrotadoPorJefe
+              ? 'El jefe final te ha vencido. Vuelve a intentarlo.'
+              : 'Te quedaste sin vidas. Elige otra misión o inténtalo otra vez.'
+          }}
+        </p>
+
+        <button class="btn btn-danger btn-lg mt-3" @click="resetJuego">Volver al selector</button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import misionesData from '@/data/misiones.json'
 import QuizQuestion from '@/components/QuizQuestion.vue'
@@ -57,25 +70,42 @@ const router = useRouter()
 const mision = ref(misionesData.misiones.find((m) => m.id === route.params.id))
 
 // Preguntas de la misión
-const preguntas = ref(mision.value?.preguntas || [])
-const totalPreguntas = ref(preguntas.value.length)
+const preguntas = computed(() => mision.value?.preguntas || [])
+const totalPreguntas = computed(() => preguntas.value.length)
 
 // Estado del juego
 const currentQuestionIndex = ref(0)
 const vidas = ref(3)
 const jefeDerrotado = ref(false)
 const mostrarMedalla = ref(false)
+const ultimaPreguntaFallada = ref(null)
+const derrotadoPorJefe = ref(false)
+const nombreJefe = computed(() => mision.value?.jefe?.nombre || 'Jefe Final')
 
 // Verificar si ya completó esta misión
 const completedMissions = ref(JSON.parse(localStorage.getItem('completedMissions') || '[]'))
+
+watch(
+  () => mision.value,
+  () => {
+    if (completedMissions.value.includes(mision.value.id)) {
+      jefeDerrotado.value = true
+      mostrarMedalla.value = true
+    }
+  },
+)
 
 // Manejar respuesta correcta en pregunta normal
 function handleRespuestaCorrecta() {
   currentQuestionIndex.value++
 }
 
+// Manejar respuesta incorrecta
 function handleRespuestaIncorrecta() {
   vidas.value--
+  if (vidas.value <= 0) {
+    ultimaPreguntaFallada.value = preguntas.value[currentQuestionIndex.value]
+  }
 }
 
 // Manejar respuesta correcta en jefe final
@@ -86,6 +116,8 @@ function handleJefeFinalCorrecto(esCorrecta) {
   } else {
     // Si falla al jefe final, pierde todas las vidas
     vidas.value = 0
+    ultimaPreguntaFallada.value = mision.value.jefe
+    derrotadoPorJefe.value = true
   }
 }
 
@@ -108,10 +140,7 @@ function marcarMisionComoCompletada() {
 
 // Reiniciar juego
 function resetJuego() {
-  currentQuestionIndex.value = 0
-  vidas.value = 3
-  jefeDerrotado.value = false
-  mostrarMedalla.value = false
+  router.push('/misiones')
 }
 
 // Volver al selector
@@ -125,7 +154,27 @@ function irSelectorMisiones() {
   max-width: 600px;
   margin: auto;
 }
-.game-over {
-  color: red;
+
+.game-over-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(139, 0, 0, 0.95);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.game-over-content {
+  padding: 2rem;
+  border: 4px solid white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 0 20px red;
 }
 </style>

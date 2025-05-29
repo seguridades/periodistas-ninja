@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 const props = defineProps({
   pregunta: {
@@ -61,6 +61,15 @@ function seleccionarOpcion(index) {
     emit('respuestaIncorrecta')
   }
 }
+
+// Reiniciar selección cuando cambie la pregunta
+watch(
+  () => props.pregunta,
+  () => {
+    selectedIndex.value = null
+    esCorrecta.value = null
+  },
+)
 </script>
 
 <style scoped>
