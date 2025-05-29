@@ -130,7 +130,7 @@
         }
       ],
       "jefe": {
-        "nombre": "Yōkai Hacker",
+        "nombre": "Demonio de la informacion",
         "imagen": "yokai-hacker.png",
         "mensajeIntro": "¡Ja! ¿Crees que puedes proteger informacion sensible?",
         "mensajeCorrecto": "¡No puede ser! Tu conocimiento me ha herido.",
